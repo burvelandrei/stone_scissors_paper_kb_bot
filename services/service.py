@@ -2,7 +2,7 @@ from lexicon.lexicon import LEXICON_RU
 from random import choice
 
 def get_bot_choice() -> str:
-    return choice['stone', 'scissors', 'paper']
+    return choice(['stone', 'scissors', 'paper'])
 
 
 def _normalize_user_choice(user_choice: str) -> str:

@@ -28,9 +28,9 @@ async def process_no(message:Message):
     await message.answer(LEXICON_RU['user_no'])
 
 # Хэндлер которы обрабатывает выбор пользователя
-@user_router.message(F.text.in_(LEXICON_RU['stone'],
+@user_router.message(F.text.in_((LEXICON_RU['stone'],
                                 LEXICON_RU['scissors'],
-                                LEXICON_RU['paper']))
+                                LEXICON_RU['paper'])))
 async def process_game(message:Message):
     bot_choice = get_bot_choice()
     await message.answer(f"{LEXICON_RU['bot_choice']} -  {LEXICON_RU[bot_choice]}")
